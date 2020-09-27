@@ -1,0 +1,5 @@
+package net.employeemanagement.dao;
+
+public class EmployeeDao {
+
+}

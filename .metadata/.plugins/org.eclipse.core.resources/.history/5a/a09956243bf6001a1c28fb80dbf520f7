@@ -1,0 +1,5 @@
+package net.login.bean;
+
+public class LoginBean {
+
+}

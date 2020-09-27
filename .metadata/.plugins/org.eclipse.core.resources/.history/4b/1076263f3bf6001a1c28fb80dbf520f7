@@ -1,0 +1,5 @@
+package net.login.web;
+
+public class LoginServlet {
+
+}

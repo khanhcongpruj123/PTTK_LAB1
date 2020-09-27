@@ -1,0 +1,5 @@
+package net.usermanagement.model;
+
+public class User {
+
+}

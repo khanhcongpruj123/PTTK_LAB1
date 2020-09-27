@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="net.employeemanagement.dao.EmployeeDao"/>
+<fullyQualifiedTypeName name="net.employeemanagement.model.Employee"/>
+<fullyQualifiedTypeName name="net.login.database.LoginDao"/>
+</qualifiedTypeNameHistroy>
