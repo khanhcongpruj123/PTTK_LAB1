@@ -9,6 +9,13 @@ public class Customer {
 	private Account account;
 	
 	
+	public Customer(int id, String name, Sex sex, String address, Account account) {
+		this.id = id;
+		this.name = name;
+		this.sex = sex;
+		this.address = address;
+		this.account = account;
+	}
 	
 	public Customer(String name, Sex sex, String address, Account account) {
 		this.name = name;

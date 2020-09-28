@@ -20,6 +20,8 @@ public class LoginServlet extends HttpServlet {
 	private AccountDAO accountDAO = new AccountDAOImpl();
 	private CustomerDAO customerDAO = new CustomerDAOImpl(accountDAO);
 	
+	public static Customer customer = null;
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.sendRedirect("login.jsp");
@@ -30,9 +32,9 @@ public class LoginServlet extends HttpServlet {
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		
-		Customer customer = checkLogin(username, password);
+		customer = checkLogin(username, password);
 		if (customer != null) {
-			resp.sendRedirect("home.jsp");
+			resp.sendRedirect("home");
 		} else {
 			
 		}

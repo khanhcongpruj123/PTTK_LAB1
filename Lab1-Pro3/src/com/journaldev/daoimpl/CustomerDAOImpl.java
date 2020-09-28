@@ -67,7 +67,7 @@ public class CustomerDAOImpl implements CustomerDAO{
 				} else {
 					sex = Customer.Sex.MALE;
 				}
-				customer = new Customer(name, sex, address, acc);
+				customer = new Customer(_id, name, sex, address, acc);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

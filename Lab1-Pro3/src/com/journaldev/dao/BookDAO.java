@@ -7,4 +7,5 @@ import com.journaldev.model.Book;
 public interface BookDAO {
 	List<Book> getAllBook();
 	List<Book> getBooksByName(String name);
+	Book getBookById(int id);
 }

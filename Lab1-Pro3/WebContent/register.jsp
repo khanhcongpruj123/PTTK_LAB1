@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <div align="center">ß
+ <div align="center">
   <h1>Employee Register Form</h1>
   <form action="<%= request.getContextPath() %>/register" method="post">
    <table style="with: 80%">

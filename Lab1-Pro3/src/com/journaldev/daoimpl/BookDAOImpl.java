@@ -20,6 +20,7 @@ public class BookDAOImpl implements BookDAO{
 	
 	private final String GET_ALL_BOOKS = "select * from tbl_book";
 	private final String GET_BOOKS_BY_NAME = "select * from tbl_book where name like ?";
+	private final String GET_BOOK_BY_ID = "select * from tbl_book where id = ?";
 	
 	protected Connection getConnection() {
 		Connection connection = null;
@@ -84,6 +85,31 @@ public class BookDAOImpl implements BookDAO{
 			e.printStackTrace();
 		}
 		return list;
+	}
+
+	@Override
+	public Book getBookById(int id) {
+		// Step 1: Establishing a Connection
+		try (Connection connection = getConnection();
+				// Step 2:Create a statement using connection object
+				PreparedStatement preparedStatement = connection.prepareStatement(GET_BOOK_BY_ID);) {
+			System.out.println(preparedStatement);
+			preparedStatement.setInt(1, id);
+			// Step 3: Execute the query or update query
+			ResultSet rs = preparedStatement.executeQuery();
+
+			// Step 4: Process the ResultSet object.
+			while (rs.next()) {
+				int _id = rs.getInt("id");
+				String _name = rs.getString("name");
+				String author = rs.getString("author");
+				Book book = new Book(_id, _name, author);
+				return book;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }
