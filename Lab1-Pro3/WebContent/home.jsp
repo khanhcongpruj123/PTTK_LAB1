@@ -18,6 +18,9 @@
 		<h1>Book</h1>
 	</center>
 	<div align="center">
+		<form action="<%=request.getContextPath()%>/login">
+			<input type="submit" value="Logout"/>
+		</form>
 		<form action="<%=request.getContextPath()%>/home" method="post">
 			<table style="with: 100%">
 				<tr>
@@ -36,6 +39,7 @@
 				<tr>
 					<td><c:out value="${book.name}" /></td>
 					<td><c:out value="${book.author}" /></td>
+					<td><a href="order?id=<c:out value='${book.id}' />">Order</a>
 				</tr>
 			</c:forEach>
 		</table>
